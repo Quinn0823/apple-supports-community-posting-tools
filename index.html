@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="author" content="Quinn0823">
+    <meta name="keywords" content="Quinn-Web, Quinn Qiu, Quinn0823, Personal Website">
+    <meta name="description" content="它用于辅助回复 Apple 支持社区 里的提问.">
+
+    <meta name="theme-color" content="#99ccff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#6699cc" media="(prefers-color-scheme: dark)">
+    
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"> -->
+
+    <meta property="og:site_name" content="Quinn-Web">
+    <meta property="og:title" content="Apple 支持社区 发帖工具">
+    <meta property="og:description" content="它用于辅助回复 Apple 支持社区 里的提问.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://quinn0823.github.io/images/icons/icon-32.png">
+
+    <base href="/apple-supports-community-posting-tools/">
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/icon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon-32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/images/icons/icon-64.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/images/icons/icon-128.png">
+
+    <link rel="stylesheet" type="text/css" href="/projects/base/css/page.css">
+    <link rel="stylesheet" type="text/css" href="css/project.css">
+    
+    <script src="/js/font_awesome.js" crossorigin="anonymous"></script>
+
+    <title>Apple 支持社区 发帖工具</title>
+</head>
+<body>
+    <div id="header"></div>
+    <h3>信息</h3>
+    <p>支持类型：
+        <select id="type" onchange="typeChange();probChange()">
+            <option>Mac</option>
+            <option>iPad</option>
+            <option>iPhone</option>
+            <option>Apple Watch</option>
+            <option>AirPods</option>
+            <option>Beats by Dre</option>
+            <option>AirTag</option>
+            <option>Apple Pencil</option>
+            <option>HomePod</option>
+            <option>iPod</option>
+            <option>妙控键盘</option>
+            <option>智能键盘</option>
+            <option>无线</option>
+            <option>账单和订阅</option>
+            <option>Apple ID</option>
+            <option>App Store</option>
+            <option>硬件保障</option>
+            <option>Apple Pay</option>
+            <option>Apple Music</option>
+            <option>iCloud</option>
+            <option>iTunes 播放器</option>
+        </select>
+    </p>
+    <p>问题：
+        <input type="text" id="probIn" onchange="probChange()">
+    </p>
+    <hr>
+    <h3>内容</h3>
+    <label><input type="checkbox" id="step" onchange="contChange()">操作步骤</label>
+    <div id="stepHide">
+        <input id="stepIn"><button onclick="stepAdd()">新增行</button>
+    </div>
+    <br>
+    <label><input type="checkbox" id="docu" name="cont" onchange="contChange()">技术文档</label>
+    <div id="docuHide">
+        <p>文本：<input type="text" id="textIn"></p>
+        <p>链接：<input type="url" id="urlIn"></p>
+        <p><button onclick="docuSet()">存储</button></p>
+    </div>
+    <hr>
+    <h3>预览<button id="outChoose" onclick="outChoose()">复制</button></h3>
+    <div id="output">
+        <div id="probOut"></div>
+        <div id="solutionOut">
+            <div id="stepOut">
+            </div>
+            <div id="docuOut">
+            </div>
+        </div>
+        <div id="endingOut"></div>
+        <!-- <div id="copyrightOut"></div> -->
+    </div>
+    <div id="footer">
+        <div id="update">Apr. 11, 2024</div>
+        <div id="people">Quinn Qiu</div>
+    </div>
+    <script src="/projects/base/js/page.js"></script>
+    <script src="js/project.js"></script>
+</body>
